@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_purl_provider().
+ */
+function ctc_survey_integration_purl_provider() {
+  $items = array();
+  $items['ctc_survey'] = array(
+    'name' => t('CTC Survey'),
+    'description' => t('CTC Survey provider. Prints the modifier ID.'),
+    'callback' => 'ctc_survey_callback',
+    'callback arguments' => array(),
+    'example' => 'foo',
+  );
+  return $items;
+}
+
+/**
+ * PURL callback.
+ */
+function ctc_survey_integration_callback($id) {
+  debug(t('PURL ID: @id', array('@id' => $id)));
+}

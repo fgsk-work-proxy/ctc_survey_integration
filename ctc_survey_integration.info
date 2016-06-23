@@ -1,0 +1,5 @@
+name = "CTC Survey Integration"
+description = "Provide functionalities used for ctc survey integration."
+core = 7.x
+package = CTC
+dependencies[] = "purl"
